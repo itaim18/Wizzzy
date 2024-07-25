@@ -1,0 +1,35 @@
+{
+  "name": "wizzzy",
+  "version": "1.0.0",
+  "description": "A supercharged wizard to help you maintain your code, bug fixes and adding good vibes in your project and team members!",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "test": "jest",
+    "print": "node ./bin/cli.js",
+    "build": "node ./build.js",
+    "postbuild": "npm run print"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itaim18/Wizzy.git"
+  },
+  "devDependencies": {
+    "boxen": "^7.1.1",
+    "chalk": "^5.0.0",
+    "eslint": "^9.4.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-jest": "^28.5.0",
+    "jest": "^29.6.1",
+    "prettier": "^3.0.0"
+  },
+  "type": "module",
+  "author": "ItaiM",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itaim18/Wizzy/issues"
+  },
+  "homepage": "https://github.com/itaim18/Wizzy#readme"
+}
