@@ -1,35 +1,44 @@
 {
-  "name": "wizzzy",
-  "version": "1.1.0",
-  "description": "A supercharged wizard to help you maintain your code, bug fixes and adding good vibes in your project and team members!",
-  "main": "index.js",
-  "scripts": {
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "lint": "eslint .",
-    "test": "jest",
-    "print": "node ./bin/cli.js",
-    "build": "node ./build.js",
-    "postbuild": "npm run print"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/itaim18/Wizzy.git"
-  },
-  "devDependencies": {
-    "boxen": "^7.1.1",
-    "chalk": "^5.0.0",
-    "eslint": "^9.4.0",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-jest": "^28.5.0",
-    "jest": "^29.6.1",
-    "prettier": "^3.0.0"
-  },
-  "type": "module",
-  "author": "ItaiM",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/itaim18/Wizzy/issues"
-  },
-  "homepage": "https://github.com/itaim18/Wizzy#readme"
+	"name": "wizzzy",
+	"version": "4.0.1",
+	"description": "A supercharged wizard to help you maintain your code, bug fixes and adding good vibes in your project and team members!",
+	"main": "/bin/card.mjs",
+	"bin": {
+		"wizzzy": "./bin/card.mjs"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/itaim18/Wizzy.git"
+	},
+	"homepage": "https://itaimiz.com/",
+	"scripts": {
+		"prepublish": "npm run build",
+		"build": "node build.mjs",
+		"dev": "npm run build && node ./bin/card.mjs",
+		"format": "npx @biomejs/biome format --write",
+		"lint": "npx @biomejs/biome lint --write",
+		"check": "npx @biomejs/biome check --write"
+	},
+	"keywords": [
+		"card",
+		"npm",
+		"npm card",
+		"npx",
+		"npx card",
+		"business card"
+	],
+	"author": "Itai Mizlish <itaimizlish@gmail.com> (https://itaimiz.com/)",
+	"license": "MIT",
+	"files": [
+		"bin/card.mjs",
+		"bin/output"
+	],
+	"devDependencies": {
+		"@biomejs/biome": "1.8.2",
+		"boxen": "^7.1.1",
+		"chalk": "^5.3.0"
+	},
+	"bugs": {
+		"url": "https://github.com/itaim18/Wizzy/issues"
+	}
 }
